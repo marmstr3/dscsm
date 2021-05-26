@@ -1,0 +1,26 @@
+{% load blog_extras %}
+<ul class="pagination">
+    {% if page_obj.has_previous %}
+        <li><a href="?page=1" class="button small primary">First</a></li>
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="button small">Prev</a></li>
+    {% else %}
+        <li><span class="button small primary disabled">First</span></li>
+        <li><span class="button small disabled">Prev</span></li>
+    {% endif %}
+
+    {% for page_number in page_obj.paginator.num_pages|get_range1 %}
+        {% if page_obj.number == page_number %}
+            <li><a href="#" class="page active">{{ page_number }}</a></li>
+        {% else %}
+            <li><a href="?page={{ page_number }}" class="page">{{ page_number }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="button small">Next</a></li>
+        <li><a href="?page={{ page_obj.paginator.num_pages }}" class="button small primary">Last</a></li>
+    {% else %}
+        <li><span class="button small disabled">Next</a></li>
+        <li><span class="button small disabled primary">Last</a></li>
+    {% endif %}
+</ul>

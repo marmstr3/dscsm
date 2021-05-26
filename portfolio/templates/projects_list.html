@@ -1,0 +1,21 @@
+{% extends "generic.html" %}
+{% load static %}
+{% block content %}
+    <section id="one" class="wrapper alt style1">
+        <div class="inner">
+            <h2 class="major">Vitae phasellus</h2>
+            <p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+            <section class="features">
+                {% for project in page_obj %}
+                    <article>
+                        <a href="#" class="image"><img src=" {% static '/images/pic04.jpg' %}" alt="" /></a>
+                        <h3 class="major">{{ project.title }}</h3>
+                        <p>{{ project.description}}</p>
+                        <a href="#" class="special">Read more</a>
+                    </article>
+                {% endfor %}
+            </section>
+            {% include "pagination.html" %}
+        </div>
+    </section>    
+{% endblock %}

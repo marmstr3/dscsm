@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE HTML>
+{% include "preamble.html" %}
+<html>
+	<head>
+		{% include "head.html" %}
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="">DSCSM</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					{% include "menu.html" %}
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon solid fa-laptop-code"></span></div>
+							<h2>DSCSM</h2>
+							<p>Your one-stop blog for all things Data Science, Computer Science, & Math</p>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One -->
+							<section id="one" class="wrapper spotlight style1">
+								<div class="inner">
+									<a href="#" class="image"><img src="{% static '/images/pic01.jpg' %}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">{{ post_1.title }}</h2>
+										<p>{{ post_1.description }}</p>
+										<a href="#" class="special">Read more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<a href="#" class="image"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">{{ post_2.title }}</h2>
+										<p>{{ post_2.description }}</p>
+										<a href="#" class="special">Read more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three" class="wrapper spotlight style3">
+								<div class="inner">
+									<a href="#" class="image"><img src="{% static 'images/pic03.jpg' %}" alt="" /></a>
+									<div class="content">
+										<h2 class="major">{{ post_3.title }}</h2>
+										<p>{{ post_3.description }}</p>
+										<a href="#" class="special">Read more</a>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four" class="wrapper alt style1">
+								<div class="inner">
+									<h2 class="major">Vitae phasellus</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+									<section class="features">
+										{% for post in card_posts %}
+											<article>
+												<a href="#" class="image"><img src="{% static 'images/pic04.jpg' %}" alt="" /></a>
+												<h3 class="major">{{ post.title }}</h3>
+												<p>{{ post.description}}</p>
+												<a href="#" class="special">Read more</a>
+											</article>
+										{% endfor %}
+									</section>
+									<ul class="actions">
+										<li><a href="/blog" class="button">Browse All</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer -->
+					{% include "footer.html" %}
+			</div>
+
+		<!-- Scripts -->
+			{% include "scripts.html" %}
+
+	</body>
+</html>

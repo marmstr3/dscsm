@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+{% include "preamble.html" %}
+<html lang="eng">
+	<head>
+		{% include "head.html" %}
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					{% include "generic_header.html" %}
+
+				<!-- Menu -->
+					{% include "menu.html" %}
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						{% include "page_title.html" %}
+                    
+                        <!-- One -->
+                            {% block content %}
+                            {% endblock %}
+                        </section>
+
+                <!-- Footer -->
+                    {% include "footer.html" %}
+            </div>
+    
+        <!-- Scripts -->
+            {% include "scripts.html" %}
+    
+    </body>
+</html>
