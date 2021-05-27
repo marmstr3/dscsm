@@ -9,11 +9,11 @@
 				{% for post in page_obj %}
 					<article>
 						{% thumbnail post.thumbnail "500x300" crop="center" as im %}
-										<a href="#" class="image"><img src="{{ im.url }}" alt="" /></a>
+							<a href="{% url 'post_detail' pk=post.pk %}" class="image"><img src="{{ im.url }}" alt="" /></a>
 						{% endthumbnail %}
 						<h3 class="major">{{ post.title }}</h3>
 						<p>{{ post.description}}</p>
-						<a href="#" class="special">Read more</a>
+						<a href="{% url 'post_detail' pk=post.pk %}" class="special">Read more</a>
 					</article>
 				{% endfor %}
 			</section>
