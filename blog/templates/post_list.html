@@ -1,4 +1,5 @@
 {% extends "generic.html" %}
+{% load thumbnail %}
 {% block content %}
 	<section id="one" class="wrapper alt style1">
 		<div class="inner">
@@ -7,7 +8,9 @@
 			<section class="features">
 				{% for post in page_obj %}
 					<article>
-						<a href="#" class="image"><img src="../static/images/pic04.jpg" alt="" /></a>
+						{% thumbnail post.thumbnail "500x300" crop="center" as im %}
+										<a href="#" class="image"><img src="{{ im.url }}" alt="" /></a>
+						{% endthumbnail %}
 						<h3 class="major">{{ post.title }}</h3>
 						<p>{{ post.description}}</p>
 						<a href="#" class="special">Read more</a>
