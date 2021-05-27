@@ -43,7 +43,7 @@
 									<div class="content">
 										<h2 class="major">{{ post_1.title }}</h2>
 										<p>{{ post_1.description }}</p>
-										<a href="#" class="special">Read more</a>
+										<a href="{% url 'post_detail' pk=post_1.pk %}" class="special">Read more</a>
 									</div>
 								</div>
 							</section>
@@ -57,7 +57,7 @@
 									<div class="content">
 										<h2 class="major">{{ post_2.title }}</h2>
 										<p>{{ post_2.description }}</p>
-										<a href="#" class="special">Read more</a>
+										<a href="{% url 'post_detail' pk=post_2.pk %}" class="special">Read more</a>
 									</div>
 								</div>
 							</section>
@@ -71,7 +71,7 @@
 									<div class="content">
 										<h2 class="major">{{ post_3.title }}</h2>
 										<p>{{ post_3.description }}</p>
-										<a href="#" class="special">Read more</a>
+										<a href="{% url 'post_detail' pk=post_3.pk %}" class="special">Read more</a>
 									</div>
 								</div>
 							</section>
@@ -89,7 +89,7 @@
 												{% endthumbnail %}
 												<h3 class="major">{{ post.title }}</h3>
 												<p>{{ post.description}}</p>
-												<a href="#" class="special">Read more</a>
+												<a href="{% url 'post_detail' pk=post.pk %}" class="special">Read more</a>
 											</article>
 										{% endfor %}
 									</section>

@@ -10,7 +10,7 @@
                 {% for project in page_obj %}
                     <article>
                         {% thumbnail project.preview "500x300" crop="center" as im %}
-                            <a href="#" class="image"><img src="{{ im.url }}" alt="" /></a>
+                            <a href="{{ project.github_url }}" class="image"><img src="{{ im.url }}" alt="" /></a>
                         {% endthumbnail %}
                         <h3 class="major">{{ project.title }}</h3>
                         <p>{{ project.description}}</p>

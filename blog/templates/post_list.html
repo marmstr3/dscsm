@@ -13,7 +13,7 @@
 						{% endthumbnail %}
 						<h3 class="major">{{ post.title }}</h3>
 						<p>{{ post.description}}</p>
-						<a href="#" class="special">Read more</a>
+						<a href="{% url 'post_detail' pk=post.pk %}" class="special">Read more</a>
 					</article>
 				{% endfor %}
 			</section>
