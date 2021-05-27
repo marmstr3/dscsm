@@ -5,3 +5,7 @@ data/
 static
 static/
 __pycache__/
+*.log
+*.pot
+*.pyc
+local_settings.py
