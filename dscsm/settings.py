@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     # 3rd Party Apps
     'sorl.thumbnail',
-    'django_summernote',
 
     # Project Apps
     'blog',
@@ -127,8 +126,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Settings for Summernote
-X_FRAME_OPTIONS = "SAMEORIGIN"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
