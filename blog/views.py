@@ -39,7 +39,7 @@ def post_list(request):
 
     return render(request,
                   '../templates/post_list.html',
-                  {'page_name': "Blog Posts",
+                  {'page_name': "Blog",
                    'page_obj': page_obj
                    }
                   )
@@ -47,4 +47,9 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'blog/post_detail.html', {'post': post})
+    return render(request,
+                  '../templates/post_detail.html',
+                  {'post': post,
+                   'page_name': post.title,
+                   }
+                 )

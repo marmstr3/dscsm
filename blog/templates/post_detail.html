@@ -1,0 +1,7 @@
+{% extends "generic.html" %}
+{% load static %}
+{% block content %}
+    <section id="one" class="wrapper alt style1">
+            <div class="inner">
+                {{ post.content | safe }}
+{% endblock %}
