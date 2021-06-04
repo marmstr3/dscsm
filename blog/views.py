@@ -39,7 +39,7 @@ def post_list(request):
 
     return render(request,
                   '../templates/post_list.html',
-                  {'page_name': "DSCSM - Blog",
+                  {'page_name': "Blog",
                    'page_obj': page_obj
                    }
                   )
